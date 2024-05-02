@@ -34,10 +34,15 @@ export default () => {
         if (isActive) {
             interval = setInterval(() => {
                 setTime((time) => time - 1);
-            }, 1000);
+            }, 1000); // This represents the interval of 1 second
         }
-        return () => clearInterval(interval);
+        return () => clearInterval(interval); // This represents the cleanup function that React will call when the component unmounts
     },[isActive, time]);
+
+    function startShortCut(event) {
+        setTime(parseInt(event.target.id));
+        setIsActive(true);
+    }
 
     return (
         <div>
@@ -56,6 +61,9 @@ export default () => {
             />
             <button onClick={isActive ? pauseTimer : startTimer} > {isActive ? 'Pause' : 'Start'}</button>
             <button onClick={resetTimer}>Reset</button>
+            <button id="300" onClick={startShortCut}>Start 5 min</button>
+            <button id="600"  onClick={startShortCut}>Start 10 min</button>
+            <button id="900"  onClick={startShortCut}>Start 15 min</button>
           </div>
           <div>Time Remaining: {formatTime(time)}</div>
         </div>
