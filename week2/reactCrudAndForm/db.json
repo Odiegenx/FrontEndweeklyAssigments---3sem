@@ -1,0 +1,32 @@
+{
+  "api": [
+    {
+      "id": "1",
+      "age": "22",
+      "name": "Steve",
+      "email": "steve@test.com",
+      "gender": "male"
+    },
+    {
+      "id": "2",
+      "age": "22",
+      "name": "Michelle",
+      "email": "michelle@test.com",
+      "gender": "female"
+    },
+    {
+      "id": "3",
+      "age": "30",
+      "name": "John",
+      "email": "blah@hht.com",
+      "gender": "male"
+    },
+    {
+      "id": "4",
+      "age": "36",
+      "name": "Patrick Fabrin",
+      "email": "pfabrin@hotmail.com",
+      "gender": "male"
+    }
+  ]
+}
