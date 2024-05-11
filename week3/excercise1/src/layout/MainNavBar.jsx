@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
+import LogoutButton from "./LogoutButton.jsx";
 
-export default function MainNavBar() {
+export default function MainNavBar({currentUser ,setCurrentUser}) {
     return (
         <nav>
             <li>
@@ -15,12 +16,18 @@ export default function MainNavBar() {
             <li>
                 <NavLink to="/posts">Posts</NavLink>
             </li>
-            <li>
-                <NavLink to="/login">Login</NavLink>
-            </li>
-            <li>
-                <NavLink to="/logout">Log out</NavLink>
-            </li>
+            {currentUser ?
+                <LogoutButton setCurrentUser={setCurrentUser}/>
+                :
+                <div>
+                    <li>
+                        <NavLink to="/login">Login</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/register">Register</NavLink>
+                    </li>
+                </div>
+            }
         </nav>
     )
 }

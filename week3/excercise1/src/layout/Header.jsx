@@ -1,10 +1,10 @@
 import MainNavBar from "./MainNavBar.jsx";
 
 
-export default function Header() {
+export default function Header({currentUser , setCurrentUser}) {
     return (
         <>
-            <MainNavBar/>
+            <MainNavBar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
         </>
     )
 }
