@@ -1,6 +1,9 @@
 const loginData = async (loginInfo) => {
     const { username, password } = loginInfo;
 
+    const getfromLocalStorage = (key) => {
+    }
+
     const localHost = "http://localhost:7070/api/security/auth/login"
     //const dropletUrl = "http://207.154.244.108:7070/api/security/auth/login"
     try {

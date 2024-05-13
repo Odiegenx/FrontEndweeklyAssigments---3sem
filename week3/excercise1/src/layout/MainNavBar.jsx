@@ -5,7 +5,9 @@ import LogoutButton from "./LogoutButton.jsx";
 const NavBar = styled.nav`
     display: flex;
     justify-content: space-between;
-    background: aqua;
+    background: #100000;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 10px 0px rgba(10, 28, 3, 0.75);
 `;
 
 const NavList = styled.ul`
@@ -14,7 +16,16 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
-    margin-right: 10px;
+    margin-right: 20px;
+`;
+
+const StyledLink = styled(NavLink)`
+    text-decoration: none;
+    color: #e94560;
+    font-size: 18px;
+    &:hover {
+        color: #0f3460;
+    }
 `;
 
 const AuthLinks = styled.div`
@@ -26,16 +37,16 @@ export default function MainNavBar({currentUser ,setCurrentUser}) {
         <NavBar>
             <NavList>
                 <NavItem>
-                    <NavLink to="/home">Home</NavLink>
+                    <StyledLink to="/home">Home</StyledLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink to="/about">About</NavLink>
+                    <StyledLink to="/about">About</StyledLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink to="/contact">Contact</NavLink>
+                    <StyledLink to="/contact">Contact</StyledLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink to="/posts">Posts</NavLink>
+                    <StyledLink to="/posts">Posts</StyledLink>
                 </NavItem>
             </NavList>
             <NavList>
@@ -44,10 +55,10 @@ export default function MainNavBar({currentUser ,setCurrentUser}) {
                     :
                     <AuthLinks>
                         <NavItem>
-                            <NavLink to="/login">Login</NavLink>
+                            <StyledLink to="/login">Login</StyledLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink to="/register">Register</NavLink>
+                            <StyledLink to="/register">Register</StyledLink>
                         </NavItem>
                     </AuthLinks>
                 }

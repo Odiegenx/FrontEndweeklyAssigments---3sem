@@ -1,7 +1,8 @@
 export default function LogoutButton( {setCurrentUser} ) {
 
     const handleLogout = () => {
-        setCurrentUser(null); // Call setCurrentUser here, not directly in the Logout function
+        setCurrentUser(null);// Call setCurrentUser here, not directly in the Logout function
+        localStorage.clear();
     };
 
     return (
